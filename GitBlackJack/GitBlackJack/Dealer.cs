@@ -30,9 +30,10 @@ namespace GitBlackJack
             Card cardHolder = new Card();
 
             foreach (var item in ActiveDeck)
-            {   
-                cardHolder = item;
-                ActiveDeck.
+            {
+                int PointCard = random.Next(ActiveDeck.Count);
+                cardHolder = 
+                ActiveDeck[]
                 ActiveDeck.RemoveAt
 
             }
