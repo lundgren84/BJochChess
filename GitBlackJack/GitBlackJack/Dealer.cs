@@ -12,11 +12,12 @@ namespace GitBlackJack
 
         public int Balance { get; set; }
 
-        Dealer(int balance)
+       public Dealer(int balance)
         {
             this.Balance = balance;
             this.ActiveDeck = new List<Card>();
         }
+
         public void GetDeck(List<Card> deck)
         {
             foreach (var item in deck)
@@ -32,12 +33,22 @@ namespace GitBlackJack
             foreach (var item in ActiveDeck)
             {
                 int PointCard = random.Next(ActiveDeck.Count);
-                cardHolder = 
-                ActiveDeck[]
-                ActiveDeck.RemoveAt
+                int pointcard = random.Next(ActiveDeck.Count);
 
+                cardHolder = ActiveDeck[PointCard];
+                ActiveDeck.RemoveAt(PointCard);
+                ActiveDeck.Add(cardHolder);
             }
         }
+        public Card GiveCard()
+        {
+            Card card = new Card();
+            card = ActiveDeck[0];
+            ActiveDeck.RemoveAt(0);
+
+            return card;
+
+        } 
 
     }
 }

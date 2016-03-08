@@ -1,12 +1,13 @@
 ﻿Class Card:
 	           
 	   int Value
-	   --- Type
+	   string Type ///enum
 	
 Class Deck:
 
 		List<Card> DeckOfCard
 
+		metod- AddCards
 		metod- return List<Card> DeckOfCard
 
 Class Dealer:
@@ -35,4 +36,4 @@ Class GamePresentation:
 Class StaticMethods:
 
 		metod- ERRORHANDLE
-		metod- 
+		metod- GetType
